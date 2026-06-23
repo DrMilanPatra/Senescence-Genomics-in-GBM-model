@@ -37,32 +37,39 @@ Python environment
 
 Analysis script description (summary):
 
-Population level Survival analysis models:
 
-survival_analysis_cox.r
-
-scRNA-seq analysis of senescence: data processing, NEBULA differential analysis, cell state analysis, ligand-receptor interaction (L-R), and other analysis:
+1. Single cell RNA-seq analysis of senescence: data processing, NEBULA differential analysis, cell state analysis, ligand-receptor interaction (L-R), and other analysis:
 
 processing and doublet discrimination: scRNA_data_processing.r, run_scrublet.py
 Signature high vs low cells: signature_high_vs_low_Nebula_differential_analysis.r
 p16+ vs p16- cells: p16pos_vs_p16neg_Nebula_differential_analysis.r
 Mutation effect included in NEBULA model: Mutation_fixed_effect_signature_high_vs_low_Nebula_differential_analysis.r
+
 L-R interaction: run_cellphonedb_signature_statistical_3.py, run_cellphonedb_cellstate_statistical_3.py, cellphonedb_mixed models.r
-cell state: Cell state assignments.r, DE_CellState_Wilcox.r
 
-spatial transcriptomics analysis of senescence: spatial_GBM_statistics.r, 
+2. cell state: Cell state assignments.r, DE_CellState_Wilcox.r
+
+3. spatial transcriptomics analysis of senescence: spatial_GBM_statistics.r
 
 
+4. Population level Survival analysis models and other statistical models:
 
-Usage:
+survival_analysis_cox.r, Linear_mixed_model_IFNactivity_predictors.r
 
-Rscript R_scripts/differential_expression.R
-python python_scripts/scRNA_processing.py
-Users must update input file paths within each script prior to execution.
+5. Single cell ATAC-seq analysis: processing, cicero, ChromVAR, statistical models:
+
+Data processing and other anaysis: scATAC_seq_analysis_ChromVar.r
+Probabilistic model and other analysis: Probabilistic_model_SE_MP_scatac.r, scATAC_CRISPR_statistical_models.r, Linear_model_chromVAR_state.r
+
+6. Enhancer and super-enhancer analysis, and enrichments:
+
+   Consensus Non-negative matrix factorization for super enhancer meta program: NMF_superenhancer_consensus_MP.r, NMF_stability.r, superenhancer_consensus_MP_enrichments.r, Enrichment_statistics_CRISPR_enhancer.r
+
+
 
 
 Notes
-•	No raw data, intermediate files, or final figures are included in this repository.
+•	No raw data, or final figures are included in this repository.
 •	No unified pipeline framework is used; scripts are modular and independent.
 
 
