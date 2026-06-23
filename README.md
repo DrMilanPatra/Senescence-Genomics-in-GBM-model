@@ -1,4 +1,4 @@
-Multi-omics analysis of senescence in glioblastoma models
+Multi-omics analysis of senescence in human glioblastoma models
 
 Overview
 
@@ -25,10 +25,8 @@ Repository structure
 
 •	R_scripts/ : R-based analysis scripts for data processing, differential expression, chromatin analysis, and statistical models.
 •	python_scripts/ : Python-based computational analysis for scrublet, CellPhonedb
-•	config/ : Optional configuration files
 
 
-Each script is fully standalone and can be executed independently.
 
 
 Software requirements
@@ -56,19 +54,24 @@ Analyses include:
 •	Chromatin interaction analysis (HiChIP)
 •	Integration of multi-omics datasets to characterize senescence-associated regulatory programs in GBM models
 
+Usage:
 
-Usage
-
-
-Each script is intended to be executed independently.
-Example:
 Rscript R_scripts/differential_expression.R
 python python_scripts/scRNA_processing.py
 Users must update input file paths within each script prior to execution.
+
+
 Notes
 •	No raw data, intermediate files, or final figures are included in this repository.
 •	No unified pipeline framework is used; scripts are modular and independent.
+
+
 Citation
+
+
 If you use this repository, please cite the associated publication.
+
+
 Contact
+
 For questions or collaboration, please contact: [mln.patra@gmail.com]
