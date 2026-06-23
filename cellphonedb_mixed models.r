@@ -74,7 +74,7 @@ for (patient in patients) {
   cat("Saved results for:", patient, "\n")
 }
 
-cat("\n✅ ALL PATIENTS COMPLETED\n")
+cat("\nALL PATIENTS COMPLETED\n")
 
 
 
@@ -198,7 +198,7 @@ fwrite(emm_df,
 
 write.csv(df_all, "CPDB_LMM_long_format.csv", row.names = FALSE)
 
-cat("\n✅ LMM DATASET CREATED\n")
+cat("\nLMM DATASET CREATED\n")
 
 
 #######plotiing
