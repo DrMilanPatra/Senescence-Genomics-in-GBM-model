@@ -21,14 +21,6 @@ Data types analyzed
 •	HiChIP chromatin interaction data for GBM samples
 
 
-Repository structure
-
-•	R_scripts/ : R-based analysis scripts for data processing, differential expression, chromatin analysis, and statistical models.
-•	python_scripts/ : Python-based computational analysis for scrublet, CellPhonedb
-
-
-
-
 Software requirements
 
 
@@ -43,16 +35,24 @@ Python environment
 •	Common packages include scanpy, pandas, numpy, scipy, matplotlib, and related genomics tools
 
 
-Analysis workflow (summary)
+Analysis script description (summary):
+
+Population level Survival analysis models:
+
+survival_analysis_cox.r
+
+scRNA-seq analysis of senescence: data processing, NEBULA differential analysis, cell state analysis, ligand-receptor interaction (L-R), and other analysis:
+
+processing and doublet discrimination: scRNA_data_processing.r, run_scrublet.py
+Signature high vs low cells: signature_high_vs_low_Nebula_differential_analysis.r
+p16+ vs p16- cells: p16pos_vs_p16neg_Nebula_differential_analysis.r
+Mutation effect included in NEBULA model: Mutation_fixed_effect_signature_high_vs_low_Nebula_differential_analysis.r
+L-R interaction: run_cellphonedb_signature_statistical_3.py, run_cellphonedb_cellstate_statistical_3.py, cellphonedb_mixed models.r
+cell state: Cell state assignments.r, DE_CellState_Wilcox.r
+
+spatial transcriptomics analysis of senescence: spatial_GBM_statistics.r, 
 
 
-Analyses include:
-•	Quality control and preprocessing of sequencing data
-•	Transcriptomic profiling of senescent and proliferating GBM models
-•	Chromatin accessibility analysis (ATAC-seq and scATAC-seq)
-•	Chromatin state analysis (ChIP-seq)
-•	Chromatin interaction analysis (HiChIP)
-•	Integration of multi-omics datasets to characterize senescence-associated regulatory programs in GBM models
 
 Usage:
 
